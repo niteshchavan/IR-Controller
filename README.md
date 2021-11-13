@@ -31,4 +31,5 @@ sudo ir-keytable -p nec
 # make toml file 
 sudo ir-keytable -w /pathToFile/your.toml
 
-# my keymap attached
+# my keymap attached copy both 
+chmod u+x /nitesh/ir-remote/ir-remote
