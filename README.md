@@ -35,6 +35,16 @@ sudo ir-keytable -w /pathToFile/your.toml
 chmod u+x /nitesh/ir-remote/ir-remote
 
 # Next is maping keys to custom scripts/ commands
+# create a script fro example 
+
+nano /nitesh/ir-remote/kill-youtube
+
+``` 
+#!/bin/bash
+
+sudo killall chromium-browser
+```
+
 The triggerhappy service is used, it can map events to scripts and is installed by default on Raspbian.
 
 nano /lib/systemd/system/triggerhappy.service
@@ -47,7 +57,7 @@ systemctl daemon-reload && systemctl restart triggerhappy.service
 
 # Edit
 
-nano /etc/triggerhappy/triggers.d/custom-key.conf
+> nano /etc/triggerhappy/triggers.d/custom-key.conf
 
 # Paste below save and exit
 
