@@ -1,0 +1,6 @@
+#!/bin/bash
+
+ir-keytable -c
+
+ir-keytable -w /nitesh/ir-remote/key.toml
+
