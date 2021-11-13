@@ -45,11 +45,11 @@ ExecStart=/usr/sbin/thd --triggers /etc/triggerhappy/triggers.d/ --socket /run/t
 
 systemctl daemon-reload && systemctl restart triggerhappy.service
 
-#edit
+# Edit
 
 nano /etc/triggerhappy/triggers.d/custom-key.conf
 
-#Paste below save and exit
+# Paste below save and exit
 
 KEY_EXIT                   1       /nitesh/ir-remote/kill-youtube
 
