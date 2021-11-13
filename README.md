@@ -4,6 +4,8 @@ Control raspberry pi with any remote
 # Source
 https://peppe8o.com/setup-raspberry-pi-infrared-remote-from-terminal/
 
+https://blog.gordonturner.com/2020/05/31/raspberry-pi-ir-receiver/
+
 #Commands
 sudo apt update
 
@@ -43,6 +45,14 @@ nano /nitesh/ir-remote/kill-youtube
 #!/bin/bash
 
 sudo killall chromium-browser
+```
+
+> Change ownership and make executable:
+
+```
+sudo chown pi.pi /nitesh/ir-remote/kill-youtube
+sudo chmod u+x /nitesh/ir-remote/kill-youtube
+sudo chmod +x /nitesh/ir-remote/kill-youtube
 ```
 
 The triggerhappy service is used, it can map events to scripts and is installed by default on Raspbian.
