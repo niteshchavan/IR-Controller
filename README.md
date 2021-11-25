@@ -33,6 +33,25 @@ sudo ir-keytable -p nec
 # make toml file 
 sudo ir-keytable -w /pathToFile/your.toml
 
+# Move your toml to make it permenant
+cp /nitesh/ir-remote/key.toml /etc/rc_keymaps/
+
+ nano /etc/rc_maps.cfg
+
+# add below line
+
+ *       *                        key.toml
+
+sudo ir-keytable -a /etc/rc_maps.cfg -s rc0
+
+nano /etc/rc.local
+
+# add before exit 0
+
+ir-keytable -a /etc/rc_maps.cfg -s rc0
+
+exit 0
+
 # my keymap attached copy both 
 chmod u+x /nitesh/ir-remote/ir-remote
 
